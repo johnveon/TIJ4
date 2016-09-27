@@ -56,18 +56,37 @@ public class StartEnd
 				examine(in, regex);
 		}
 	}
-} /*
-	 * Output: input : As long as there is injustice, whenever a \w*ere\w*
-	 * find() 'there' start = 11 end = 16 \w*ever find() 'whenever' start = 31
-	 * end = 39 input : Targathian baby cries out, wherever a distress \w*ere\w*
-	 * find() 'wherever' start = 27 end = 35 \w*ever find() 'wherever' start =
-	 * 27 end = 35 T\w+ find() 'Targathian' start = 0 end = 10 lookingAt() start
-	 * = 0 end = 10 input : signal sounds among the stars ... We'll be there.
-	 * \w*ere\w* find() 'there' start = 43 end = 48 input : This fine ship, and
-	 * this fine crew ... T\w+ find() 'This' start = 0 end = 4 lookingAt() start
-	 * = 0 end = 4 input : Never give up! Never surrender! \w*ever find()
-	 * 'Never' start = 0 end = 5 find() 'Never' start = 15 end = 20 lookingAt()
-	 * start = 0 end = 5 Never.*?! find() 'Never give up!' start = 0 end = 14
-	 * find() 'Never surrender!' start = 15 end = 31 lookingAt() start = 0 end =
-	 * 14 matches() start = 0 end = 31
-	 */// :~
+}  
+/* Output:
+input : As long as there is injustice, whenever a
+\w*ere\w*
+find() 'there' start = 11 end = 16
+\w*ever
+find() 'whenever' start = 31 end = 39
+input : Targathian baby cries out, wherever a distress
+\w*ere\w*
+find() 'wherever' start = 27 end = 35
+\w*ever
+find() 'wherever' start = 27 end = 35
+T\w+
+find() 'Targathian' start = 0 end = 10
+lookingAt() start = 0 end = 10
+input : signal sounds among the stars ... We'll be there.
+\w*ere\w*
+find() 'there' start = 43 end = 48
+input : This fine ship, and this fine crew ...
+T\w+
+find() 'This' start = 0 end = 4
+lookingAt() start = 0 end = 4
+input : Never give up! Never surrender!
+\w*ever
+find() 'Never' start = 0 end = 5
+find() 'Never' start = 15 end = 20
+lookingAt() start = 0 end = 5
+Never give up!Never surrender!
+Never.*?!
+find() 'Never give up!' start = 0 end = 14
+find() 'Never surrender!' start = 15 end = 31
+lookingAt() start = 0 end = 14
+matches() start = 0 end = 31
+*///:~
