@@ -52,7 +52,7 @@ public class StartEnd
 		{
 			print("input : " + in);
 			for (String regex : new String[]
-			{ "\\w*ere\\w*", "\\w*ever", "T\\w+", "Never.*?!" })
+			{ "\\w*ere\\w*", "\\w*ever", "T\\w+", "Never.*?!" })//"Never.*?!" 以Never开头,!结尾的字符串
 				examine(in, regex);
 		}
 	}
