@@ -36,12 +36,13 @@ public class StartEnd
 		Display d = new Display(regex);
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(s);
+		//往下匹配
 		while (m.find())
 			d.display("find() '" + m.group() + "' start = " + m.start() + " end = " + m.end());
-		
+		//第一次匹配，应该叫findFirst()
 		if (m.lookingAt()) // No reset() necessary
 			d.display("lookingAt() start = " + m.start() + " end = " + m.end());
-		
+		//全部匹配
 		if (m.matches()) // No reset() necessary
 			d.display("matches() start = " + m.start() + " end = " + m.end());
 	}
