@@ -21,7 +21,7 @@ public class TypeCounter extends HashMap<Class<?>,Integer>{
     put(type, quantity == null ? 1 : quantity + 1);
     Class<?> superClass = type.getSuperclass();
     if(superClass != null &&
-       baseType.isAssignableFrom(superClass))
+       baseType.isAssignableFrom(superClass))//base能派生出superClass？
       countClass(superClass);
   }
   public String toString() {

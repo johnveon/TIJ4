@@ -10,7 +10,7 @@ public abstract class PetCreator {
   public Pet randomPet() { // Create one random Pet
     int n = rand.nextInt(types().size());
     try {
-      return types().get(n).newInstance();
+      return types().get(n).newInstance();//class 要求有默认的构造函数
     } catch(InstantiationException e) {
       throw new RuntimeException(e);
     } catch(IllegalAccessException e) {

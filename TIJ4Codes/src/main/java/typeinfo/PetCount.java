@@ -17,13 +17,13 @@ public class PetCount {
     }
   }	
   public static void
-  countPets(PetCreator creator) {
+  countPets(PetCreator creator) {//ForNameCreator extends PetCreator so ForNameCreator also have createArray()
     PetCounter counter= new PetCounter();
     for(Pet pet : creator.createArray(20)) {
       // List each individual pet:
       printnb(pet.getClass().getSimpleName() + " ");
       if(pet instanceof Pet)
-        counter.count("Pet");
+        counter.count("Pet");//命名类型比较，不是对象比较
       if(pet instanceof Dog)
         counter.count("Dog");
       if(pet instanceof Mutt)
@@ -44,7 +44,7 @@ public class PetCount {
         counter.count("Rat");
       if(pet instanceof Mouse)
         counter.count("Mouse");
-      if(pet instanceof Hamster)
+      if(pet instanceof Hamster)//是不是这个类似或者这个类型的派生类型
         counter.count("Hamster");
     }
     // Show the counts:

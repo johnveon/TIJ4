@@ -8,7 +8,7 @@ public class LiteralPetCreator extends PetCreator {
   @SuppressWarnings("unchecked")
   public static final List<Class<? extends Pet>> allTypes =
     Collections.unmodifiableList(Arrays.asList(
-      Pet.class, Dog.class, Cat.class,  Rodent.class,
+      Pet.class, Dog.class, Cat.class,  Rodent.class,//类字面常量
       Mutt.class, Pug.class, EgyptianMau.class, Manx.class,
       Cymric.class, Rat.class, Mouse.class,Hamster.class));
   // Types for random creation:
