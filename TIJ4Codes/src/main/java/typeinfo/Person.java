@@ -22,5 +22,5 @@ class Person {
     private NullPerson() { super("None", "None", "None"); }
     public String toString() { return "NullPerson"; }
   }
-  public static final Person NULL = new NullPerson();
+  public static final Person NULL = new NullPerson();//可以用final，因为NullPerson不可变，因为NullPerson的构造函数是private
 } ///:~

@@ -16,7 +16,7 @@ public class TypeCounter extends HashMap<Class<?>,Integer>{
         + baseType);
     countClass(type);
   }	
-  private void countClass(Class<?> type) {
+  private void countClass(Class<?> type) {//递归计数，递归找是不是baseType派生出来的类型
     Integer quantity = get(type);
     put(type, quantity == null ? 1 : quantity + 1);
     Class<?> superClass = type.getSuperclass();
