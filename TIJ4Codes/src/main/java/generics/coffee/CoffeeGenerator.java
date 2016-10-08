@@ -13,7 +13,8 @@ implements Generator<Coffee>, Iterable<Coffee> {
   // For iteration:
   private int size = 0;
   public CoffeeGenerator(int sz) { size = sz; }	
-  public Coffee next() {
+  @Override
+  public Coffee next() {//实现产生T类型对象的方法
     try {
       return (Coffee)
         types[rand.nextInt(types.length)].newInstance();
@@ -24,17 +25,21 @@ implements Generator<Coffee>, Iterable<Coffee> {
   }
   class CoffeeIterator implements Iterator<Coffee> {
     int count = size;
+    @Override
     public boolean hasNext() { return count > 0; }
+    @Override
     public Coffee next() {
       count--;
-      return CoffeeGenerator.this.next();
+      return CoffeeGenerator.this.next();//内部类可访问外部的对象，用对象可访问public方法
     }
+    @Override
     public void remove() { // Not implemented
       throw new UnsupportedOperationException();
     }
-  };	
-  public Iterator<Coffee> iterator() {
-    return new CoffeeIterator();
+  };
+  @Override
+  public Iterator<Coffee> iterator() {//实现迭代接口
+    return new CoffeeIterator();//具体实现
   }
   public static void main(String[] args) {
     CoffeeGenerator gen = new CoffeeGenerator();
