@@ -22,7 +22,7 @@ public class New {
   }
   // Examples:
   public static void main(String[] args) {
-    Map<String, List<String>> sls = New.map();
+    Map<String, List<String>> sls = New.map();//杠杆利用类型参数推断，不用再写new HashMap<String,List<String>>()
     List<String> ls = New.list();
     LinkedList<String> lls = New.lList();
     Set<String> ss = New.set();

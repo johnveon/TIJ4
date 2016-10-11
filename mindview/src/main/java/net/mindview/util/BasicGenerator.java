@@ -6,10 +6,11 @@ package net.mindview.util;
 public class BasicGenerator<T> implements Generator<T> {
   private Class<T> type;
   public BasicGenerator(Class<T> type){ this.type = type; }
+  @Override
   public T next() {
     try {
       // Assumes type is a public class:
-      return type.newInstance();
+      return type.newInstance();//1.type表示的类要求public，2.type表示的类要求必须有默认的构造函数
     } catch(Exception e) {
       throw new RuntimeException(e);
     }
