@@ -20,7 +20,8 @@ public class IceCream {
       int t;
       do
         t = rand.nextInt(FLAVORS.length);
-      while(picked[t]);
+      while(picked[t]);//创建默认为false，已经true的继续，一个数组中不能重复
+      
       results[i] = FLAVORS[t];
       picked[t] = true;
     }

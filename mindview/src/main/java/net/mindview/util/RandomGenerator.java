@@ -66,7 +66,7 @@ public class RandomGenerator {
   public static class
   Double implements Generator<java.lang.Double> {
     public java.lang.Double next() {
-      long trimmed = Math.round(r.nextDouble() * 100);
+      long trimmed = Math.round(r.nextDouble() * 100);//去掉小数点后面的数字
       return ((double)trimmed) / 100;
     }
   }
